@@ -1,0 +1,7 @@
+<a href="{% url 'wiki:index' %}">Home</a>
+
+<ul class="menu">
+    {% for page in sidebar %}
+    <li><a href="{% url 'wiki:page_view' page.slug %}">{{ page.title }}</a></li>
+    {% endfor %}
+</ul>

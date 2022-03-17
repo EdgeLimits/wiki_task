@@ -1,0 +1,15 @@
+{% extends 'base.html' %}{% load static %}
+
+{% block content %}
+<div class="container_main">
+    <div class="header">Wiki Main</div>
+    <div class="content">
+        <ul class="menu">
+            {% for page in sidebar %}
+            <li><a href="{% url 'wiki:page_view' page.slug %}">{{ page.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock content %}

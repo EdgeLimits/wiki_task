@@ -1,0 +1,21 @@
+{% extends 'base.html' %}{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="header">
+        &nbsp;
+    </div>
+    <div class="sidebar">{% include "partials/sidebar.html" with sidebar=sidebar %}</div>
+    <div class="content">
+        <form action="{% url 'wiki:page_save' slug %}" method="post">
+            {% csrf_token %}
+            <!-- <label for="title">Title:</label><br /> -->
+            <input type="text" id="title" name="title" value="{{ page.title }}" placeholder="Title" /><br />
+            <!-- <label for="content">Content:</label><br /> -->
+            <textarea id="content" name="content" placeholder="Content" row="20" cols="60">{{ page.content }}</textarea><br />
+            <button type="submit">Save</button>
+        </form>
+    </div>
+    <div class="footer">Views: {{ page.view_count }}</div>
+</div>
+{% endblock content %}

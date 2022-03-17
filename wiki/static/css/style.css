@@ -1,0 +1,79 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.container_main{
+    display: grid;
+    height: 100%;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "content";
+}
+
+.container{
+    display: grid;
+    height: 100%;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+    "sidebar header"
+    "sidebar content"
+    "sidebar footer";
+}
+
+.header{
+    grid-area: header;
+    padding: 8px;
+    border-bottom: 1px solid gray;
+}
+.sidebar{
+    border-right: 1px solid gray;
+    grid-area: sidebar;
+    padding: 8px;
+}
+.content{
+    grid-area: content;
+    padding: 8px 16px;
+}
+.footer{
+    grid-area: footer;
+    text-align: left;
+    padding: 8px;
+}
+
+.menu{
+    margin: 16px 16px 16px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li{
+    margin: 4px 0;
+}
+
+input[type="text"],
+textarea{
+    font-size: 16px;
+    line-height: 21px;
+    margin: 8px 0;
+    width: 100%;
+    max-width: 640px;
+    padding: 4px;
+    font-family: sans-serif;
+}
+
+textarea{
+    height: 150px;
+}
+
+button{
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 21px;
+}

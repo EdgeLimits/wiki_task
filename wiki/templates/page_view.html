@@ -1,0 +1,16 @@
+{% extends 'base.html' %}{% load static %}{% load wikitags %}
+
+{% block content %}
+<div class="container">
+    <div class="header">
+        <button type="button" onclick="location.href='{% url 'wiki:page_edit' slug %}';">Edit</button>
+        <!-- <a href="{% url 'wiki:page_edit' slug %}" class="button">Edit</a> Because task asked for a "button" :) -->
+    </div>
+    <div class="sidebar">{% include "partials/sidebar.html" with sidebar=sidebar %}</div>
+    <div class="content">
+        <h1>{{ page.title|escape }}</h1>
+        {{ page.content|wikilinks }}
+    </div>
+    <div class="footer">Views: {{ page.view_count }}</div>
+</div>
+{% endblock content %}
