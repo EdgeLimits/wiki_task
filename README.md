@@ -1,4 +1,22 @@
-## Task: Present a Wiki written in Django
+# Task: Present a Wiki written in Django
+
+## Run Project
+
+0. Create and activate virtual environment (https://virtualenv.pypa.io/en/latest/)
+1. Install packages
+```
+pip install requirements.txt
+```
+2. Run migrations (SQLite will be used for this task)
+```
+python3 manage.py migrate
+```
+3. Start locals server
+```
+python3 manage.py runserver
+```
+
+---
 
 Time: ~4 hours depending on experience (100%)
 
@@ -21,20 +39,3 @@ Optional bonus points for:
 * Using Docker
 * Pushing to github - ✅ 
 * Deploy in cloud
----
-## Run Project
-
-0. Create and activate virtual environment (https://virtualenv.pypa.io/en/latest/)
-1. Install packages
-```
-pip install requirements.txt
-```
-2. Run migrations (SQLite will be used for this task purposes)
-```
-python3 manage.py migrate
-```
-3. Start locals server
-```
-python3 manage.py runserver
-```
-
