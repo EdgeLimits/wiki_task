@@ -5,7 +5,7 @@
 0. Create and activate virtual environment (https://virtualenv.pypa.io/en/latest/)
 1. Install packages
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 2. Run migrations (SQLite will be used for this task)
 ```
